@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Tahuna Native Plant Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Native Plant Planner</h1>
+        <p>Explore native plants of Tahuna, Aotearoa, organized by planting zones and characteristics.</p>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar for filters -->
+        <aside>
+            <h2>Filter by:</h2>
+        
+            <h3>Growth Environment</h3>
+            <ul id="environment-filters">
+                <li><input type="checkbox" onchange="toggleFilter('zones', 'wetland')"> Wetland</li>
+                <li><input type="checkbox" onchange="toggleFilter('zones', 'montane-forest')"> Mid Altitude Forest</li>
+                <li><input type="checkbox" onchange="toggleFilter('zones', 'dry-rocky-slopes')"> Dry Rocky Slopes</li>
+                <li><input type="checkbox" onchange="toggleFilter('zones', 'lake')"> Lakeside</li>
+                <li><input type="checkbox" onchange="toggleFilter('zones', 'sheltered-gullies')"> Sheltered Gullies</li>
+                <li><input type="checkbox" onchange="toggleFilter('zones', 'alpine')"> Alpine </li>
+            </ul>
+        
+            <h3>Frost Tolerance</h3>
+            <ul id="frost-filters">
+                <li><input type="checkbox" onchange="toggleFilter('frostTolerance', 'frost-hardy')"> Frost-Hardy</li>
+                <li><input type="checkbox" onchange="toggleFilter('frostTolerance', 'frost-tolerant')"> Frost-Tolerant</li>
+                <li><input type="checkbox" onchange="toggleFilter('frostTolerance', 'frost-tender')"> Frost-Tender</li>
+            </ul>
+        
+            <h3>Plant Uses</h3>
+            <ul id="uses-filters">
+                <li><input type="checkbox" onchange="toggleFilter('uses', 'medicinal')"> Medicinal</li>
+                <li><input type="checkbox" onchange="toggleFilter('uses', 'ornamental')"> Ornamental</li>
+                <li><input type="checkbox" onchange="toggleFilter('uses', 'birds')"> Bird Attractor</li>
+            </ul>
+        </aside>
+
+        <!-- Main section for plant cards -->
+        <main>
+            <section id="plant-list">
+                <!-- Plant cards will dynamically update here -->
+            </section>
+        </main>
+    </div>
+    <script src="plants/plants.js"></script>
+    <script src="filter.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

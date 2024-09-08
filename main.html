@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Image with CTA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-screen background image */
+        .background-container {
+            position: relative;
+            height: 100%;
+            background-image: url('banner-11.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            position: absolute;
+            bottom: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff724f;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-container">
+        <a href="/index.html" class="cta-button">Get Started</a>
+    </div>
+
+</body>
+</html>
