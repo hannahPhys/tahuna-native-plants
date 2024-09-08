@@ -1,5 +1,3 @@
-// filter.js
-
 // Active filters storage
 let activeFilters = {
     zones: new Set(),
@@ -15,12 +13,12 @@ function toggleFilter(type, value) {
     } else {
         activeFilters[type].add(value);
     }
-    applyFilters();
+    applyFilters();  // Call the filtering logic after toggling filters
 }
 
-// Function to apply filters and pass the filtered results to display function
+// Function to apply filters
 function applyFilters() {
-    let filteredPlants = plants;
+    let filteredPlants = allPlants;  // Start with all plants from the global variable
 
     // Apply zone filter
     if (activeFilters.zones.size > 0) {
@@ -43,10 +41,11 @@ function applyFilters() {
         });
     }
 
-    // Apply size filter
+    // Apply size filter (if size refers to height)
     if (activeFilters.size.size > 0) {
         filteredPlants = filteredPlants.filter(plant => activeFilters.size.has(plant.height));
     }
 
-    displayPlants(filteredPlants); // Call the display function with filtered plants
+    displayPlants(filteredPlants);  // Call the display function to update the UI
+
 }

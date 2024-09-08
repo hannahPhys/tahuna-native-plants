@@ -1,0 +1,199 @@
+ [
+    {
+        "name": "Kōtukutuku",
+        "height": "1.5m",
+        "zones": ["wetland", "montane forest"],
+        "frostTolerance": ["frost-hardy", "frost-tolerant"],
+        "status": "threatened",
+        "uses": ["medicinal", "ornamental"],
+        "img": "kotukutuku.png"
+    },
+    {
+        "name": "Tarata",
+        "height": "2.5m",
+        "zones": ["hill-slopes", "dry-rocky-slopes"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "uses": ["medicinal"],
+        "img": "tarata.jpg"
+    },
+    {
+        "name": "Whauwhi",
+        "height": "2.5m",
+        "zones": ["hill-slopes", "dry-rocky-slopes"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "uses": ["medicinal"],
+        "img": "whauwhi.png"
+    },
+    {
+        "name": "Tawhai Raunui",
+        "height": "3-5m",
+        "zones": ["alpine", "montane forest"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "img": "tawhairaunui.jpg"
+    },
+    {
+        "name": "Houhere",
+        "height": "4m",
+        "zones": ["hill-slopes", "wetland"],
+        "frostTolerance": ["frost-hardy"],
+        "status": "not-threatened",
+        "uses": ["ornamental", "medicinal"],
+        "img": "houhere.jpeg"
+    },
+    {
+        "name": "Kahikatea",
+        "height": "20m",
+        "zones": ["wetland"],
+        "frostTolerance": ["frost-hardy"],
+        "status": "not-threatened",
+        "uses": ["ornamental"],
+        "img": "kahikatea.jpg"
+    },
+    {
+        "name": "Māhoe",
+        "height": "4m",
+        "zones": ["montane forest"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "uses": ["medicinal", "ornamental", "bird-attractor"],
+        "img": "Māhoe.jpg"
+    },
+    {
+        "name": "Mountain Tōtara",
+        "height": "3m",
+        "zones": ["alpine", "rocky"],
+        "frostTolerance": ["frost-hardy"],
+        "status": "not-threatened",
+        "uses": ["ornamental"],
+        "img": "Mountain-Tōtara.jpg"
+    },
+    {
+        "name": "South Island Kōwhai",
+        "height": "2.5m",
+        "zones": ["hill-slopes", "rocky"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "uses": ["ornamental", "medicinal", "bird-attractor"],
+        "img": "South Island Kōwhai.jpg"
+    },
+    {
+        "name": "Tawhai",
+        "height": "4m",
+        "zones": ["montane forest"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "uses": ["ornamental"],
+        "img": "tawhai.jpeg"
+    },
+    {
+        "name": "Mountain Wineberry",
+        "height": "1.8m",
+        "zones": ["wetland", "montane forest"],
+        "frostTolerance": ["frost-hardy"],
+        "status": "not-threatened",
+        "uses": ["ornamental", "bird-attractor"],
+        "img": "Mountain Wineberry.jpg"
+    },
+    {
+        "name": "Putaputaweta",
+        "height": "3m",
+        "zones": ["wetland", "montane forest"],
+        "frostTolerance": ["frost-hardy"],
+        "status": "not-threatened",
+        "uses": ["ornamental", "medicinal", "bird-attractor"],
+        "img": "Putaputaweta.jpg"
+    },
+    {
+        "name": "Southern Rātā",
+        "height": "5m",
+        "zones": ["montane forest"],
+        "frostTolerance": ["frost-hardy"],
+        "status": "threatened",
+        "uses": ["ornamental", "bird-attractor"],
+        "img": "Southern Rātā.jpg"
+    },
+    {
+        "name": "Fierce Lancewood",
+        "height": "1.5m",
+        "zones": ["dry-rocky-slopes", "montane forest"],
+        "frostTolerance": ["frost-tender"],
+        "status": "not-threatened",
+        "uses": ["bird-attractor"],
+        "img": "fierce-lancewood.png"
+    },
+    {
+        "name": "Tarata",
+        "height": "3m",
+        "zones": ["hill-slopes", "rocky"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "uses": ["medicinal"],
+        "img": "tarata.jpg"
+    },
+    {
+        "name": "Tī Kōuka",
+        "height": "4m",
+        "zones": ["wetland", "hill-slopes"],
+        "frostTolerance": ["frost-hardy"],
+        "status": "not-threatened",
+        "uses": ["ornamental", "medicinal"],
+        "img": "Ti-kouka.jpg"
+    },
+    {
+        "name": "Inaka",
+        "height": "0.8m",
+        "zones": ["alpine"],
+        "frostTolerance": ["frost-hardy"],
+        "status": "not-threatened",
+        "uses": ["ornamental"],
+        "img": "inaka.jpg"
+    },
+    {
+        "name": "Karamū",
+        "height": "2m",
+        "zones": ["wetland", "montane forest"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "uses": ["ornamental", "bird-attractor"],
+        "img": "karamu.png"
+    },
+    {
+        "name": "Mānuka",
+        "height": "2.5m",
+        "zones": ["hill-slopes", "rocky"],
+        "frostTolerance": ["frost-hardy"],
+        "status": "not-threatened",
+        "uses": ["medicinal", "bird-attractor"],
+        "img": "manuka.png"
+    },
+    {
+        "name": "Kānuka",
+        "height": "3m",
+        "zones": ["hill-slopes", "rocky"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "uses": ["medicinal", "bird-attractor"],
+        "img": "kanuka.png"
+    },
+    {
+        "name": "Korokia",
+        "height": "1.5m",
+        "zones": ["rocky"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "uses": ["ornamental"],
+        "img": "Korokia.jpg"
+    },
+    {
+        "name": "Kōhūhū",
+        "height": "2-3m",
+        "zones": ["hill-slopes", "rocky"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "uses": ["bird-attractor"],
+        "img": "kanuka.png"
+    }
+]
