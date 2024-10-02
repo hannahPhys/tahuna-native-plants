@@ -5,7 +5,7 @@
         "zones": ["wetland", "montane forest"],
         "frostTolerance": ["frost-hardy", "frost-tolerant"],
         "status": "threatened",
-        "uses": ["medicinal", "ornamental"],
+        "uses": ["medicinal", "bird-attractor"],
         "img": "kotukutuku.png"
     },
     {
@@ -62,12 +62,21 @@
         "img": "Māhoe.jpg"
     },
     {
+        "name": "Koromiko",
+        "height": "2m",
+        "zones": ["lowland", "coastal"],
+        "frostTolerance": ["frost-tolerant"],
+        "status": "not-threatened",
+        "uses": ["medicinal", "ornamental"],
+        "img": "Koromiko.jpg"
+    },
+    {
         "name": "Mountain Tōtara",
         "height": "3m",
         "zones": ["alpine", "rocky"],
         "frostTolerance": ["frost-hardy"],
         "status": "not-threatened",
-        "uses": ["ornamental"],
+        "uses": ["ornamental", "bird-attractor"],
         "img": "Mountain-Tōtara.jpg"
     },
     {
@@ -139,7 +148,7 @@
         "zones": ["wetland", "hill-slopes"],
         "frostTolerance": ["frost-hardy"],
         "status": "not-threatened",
-        "uses": ["ornamental", "medicinal"],
+        "uses": ["ornamental", "medicinal", "bird-attractor"],
         "img": "Ti-kouka.jpg"
     },
     {
@@ -194,6 +203,6 @@
         "frostTolerance": ["frost-tolerant"],
         "status": "not-threatened",
         "uses": ["bird-attractor"],
-        "img": "kanuka.png"
+        "img": "kohuhu.jpg"
     }
 ]

@@ -36,8 +36,12 @@ function applyFilters() {
 
     // Apply uses filter
     if (activeFilters.uses.size > 0) {
+        console.log("Uses filter:", activeFilters.uses);
         filteredPlants = filteredPlants.filter(plant => {
-            return plant.uses.some(use => activeFilters.uses.has(use));
+            // Check if plant.uses is defined and is an array
+            return Array.isArray(plant.uses) && plant.uses.some(use => {
+                return activeFilters.uses.has(use.trim().toLowerCase());
+            });
         });
     }
 
