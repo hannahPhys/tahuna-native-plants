@@ -6,7 +6,7 @@ let activeFilters = {
 };
 
 let heightThreshold = 5;
-let heightDirection = 'above';
+let heightDirection = null;
 
 // Function to handle checkbox toggle
 function toggleFilter(type, value) {
@@ -20,7 +20,7 @@ function toggleFilter(type, value) {
 
 function updateHeightFilter(value, direction) {
     heightThreshold = parseFloat(value);
-    heightDirection = direction;
+    heightDirection = direction || null;
     applyFilters();
 }
 
@@ -81,7 +81,7 @@ function applyFilters() {
     }
 
     // Apply height filter
-    if (heightThreshold !== null && heightDirection) {
+    if (heightThreshold !== null && heightDirection !== null) {
         filteredPlants = filteredPlants.filter(plant => {
             const height = parseFloat(plant.height);
             if (isNaN(height)) return true;

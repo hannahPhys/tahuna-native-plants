@@ -5,7 +5,6 @@ function showToast(message, bgColor = "#4caf50") {
     toast.style.backgroundColor = bgColor;
     toast.className = "toast show";
 
-    // Hide after 3 seconds
     setTimeout(() => {
         toast.className = "toast";
     }, 3000);
@@ -28,7 +27,7 @@ function fetchAndDisplayPlants() {
 // Function to display the plants
 function displayPlants(filteredPlants) {
     const plantList = document.getElementById('plant-list');
-    plantList.innerHTML = ''; // Clear previous content
+    plantList.innerHTML = '';
 
     filteredPlants.forEach(plant => {
         const plantCard = document.createElement('div');
@@ -46,10 +45,17 @@ function displayPlants(filteredPlants) {
             <p><strong>5 Year Height:</strong> ${plant.height}</p>
             <p><strong>Growth Zones:</strong> ${plant.zones.map(zone => capitalize(zone)).join(', ')}</p>
             <p><strong>Frost Tolerance:</strong> ${plant.frostTolerance.map(frost => capitalize(frost)).join(', ')}</p>
-            
-
         `;
 
+        plantCard.addEventListener('click', (event) => {
+            // Don't open detail if clicking on add button, image, or icon
+            if (
+                event.target.classList.contains('add-to-garden')
+            ) {
+                return; // do nothing, prevent popup
+            }
+            showPlantDetails(plant);
+        });
         addPlantClasses(plant, plantCard);  // Add plant-specific classes
         addPlantIcons(plantCard);           // Add icons based on plant properties
 
@@ -109,6 +115,9 @@ function addPlantIcons(plantCard) {
         if (plantCard.classList.contains(iconClass)) {
             const icon = document.createElement('div');
             icon.classList.add('icon', iconClass); // Class determines the icon from CSS
+            const label = iconClass.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            icon.title = label;
+            icon.setAttribute('aria-label', label);
             iconContainer.appendChild(icon);
             hasRelevantIcon = true;
         }
@@ -118,9 +127,6 @@ function addPlantIcons(plantCard) {
     if (hasRelevantIcon) plantCard.appendChild(iconContainer);
 }
 
-
-
-// Helper function to capitalize the first letter of a string
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -150,7 +156,47 @@ function initializeMasonry() {
     });
 }
 
+function showPlantDetails(plant) {
+    const detailOverlay = document.getElementById('plant-detail-overlay');
+    const detailContent = document.getElementById('plant-detail-content');
+
+    detailContent.innerHTML = `
+        <h2>${plant.name}</h2>
+        <img src="plants/${plant.img}" alt="${plant.name}" class="zoom-image" style="max-height: 200px;">
+        <p><strong>5 Year Height:</strong> ${plant.height}</p>
+        <p><strong>Growth Zones:</strong> ${plant.zones.map(capitalize).join(', ')}</p>
+        <p><strong>Frost Tolerance:</strong> ${plant.frostTolerance.map(capitalize).join(', ')}</p>
+        <p><strong>Uses:</strong> ${plant.uses.map(capitalize).join(', ')}</p>
+        <p><strong>Status:</strong> ${capitalize(plant.status)}</p>
+        <button onclick="closePlantDetails()">Close</button>
+    `;
+
+    detailOverlay.classList.add('show');
+    detailOverlay.style.display = 'flex';
+}
+
+function closePlantDetails() {
+    const detailOverlay = document.getElementById('plant-detail-overlay');
+    const detailContent = document.getElementById('plant-detail-content');
+
+    detailContent.style.opacity = '0';
+    detailContent.style.transform = 'scale(0.8)';
+
+    setTimeout(() => {
+        detailOverlay.classList.remove('show');
+        detailOverlay.style.display = 'none';
+        detailContent.innerHTML = '';
+    }, 300);
+}
+
+function closePlantDetails() {
+    const detailOverlay = document.getElementById('plant-detail-overlay');
+    detailOverlay.style.display = 'none';
+}
+
 // Main function to initialize everything on page load
 window.onload = function () {
     fetchAndDisplayPlants();  // Fetch and display plants from JSON
 };
+
+
