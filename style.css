@@ -252,7 +252,6 @@ main {
 #garden-plant-list {
     margin: 20px auto;
 
-
     .remove-from-garden {
         width: 32px !important;
         float: right;
@@ -309,23 +308,33 @@ footer {
     opacity: 0;
     transform: scale(0.8);
     transition: opacity 0.3s ease, transform 0.3s ease;
+
+    h2 {
+        margin: -10px 0 5px;
+        color: #2c641e;
+        font-weight: bold;
+    }
+
+    .close-button {
+        float: right;
+        margin-top: -13px;
+        background-image: url('icons/cross.png');
+        background-size: cover;
+        background-color: transparent;
+        border: none;
+        width: 46px;
+        height: 46px;
+        cursor: pointer;
+    }
+
+    .close-button:hover {
+
+        transform: scale(1.1);
+
+    }
 }
 
 #plant-detail-overlay.show #plant-detail-content {
     opacity: 1;
     transform: scale(1);
-}
-
-#plant-detail-content button {
-    margin-top: 1em;
-    background-color: #2c641e;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#plant-detail-content button:hover {
-    background-color: #3b7c2b;
 }

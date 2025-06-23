@@ -6,7 +6,8 @@
         "frostTolerance": ["frost-hardy", "frost-tolerant"],
         "status": "threatened",
         "uses": ["medicinal", "bird-attractor"],
-        "img": "kotukutuku.png"
+        "img": "kotukutuku.png",
+        "info": "Kōtukutuku (Fuchsia excorticata) is considered to be the worlds largest fuchsia. In damp forest it can grow to 12 metres tall and form a trunk over 1 metre in diameter. It is one of New Zealands few truly deciduous trees, losing its leaves in winter in all but the warmest areas. Attractive, small flowers appear between August and December. They change from greenish-yellow to purple-red. The flowers are rich in nectar and are visited by honey-eating birds, especially tūī, bellbirds and silvereyes. The dark purple berries, known as kōnini by Māori, are edible and taste like tamarillos. Possums love tree fuchsia and have eaten it out of many locations."
     },
     {
         "name": "Tarata",
@@ -113,7 +114,7 @@
         "frostTolerance": ["frost-hardy"],
         "status": "not-threatened",
         "uses": ["ornamental", "medicinal", "bird-attractor"],
-        "img": "Putaputaweta.jpg"
+        "img": "putaputaweta.jpg"
     },
     {
         "name": "Southern Rātā",
