@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <title>Tahuna Native Plant Planner</title>
+    <title>Tāhuna Native Plant Planner</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>Native Plant Planner</h1>
-        <p>Explore native plants of Tahuna, Aotearoa, organized by planting zones and characteristics.</p>
+        <p>Explore native plants of Tāhuna, Aotearoa, organized by planting zones and characteristics.</p>
         <a href="my-garden.html" class="cta-button">My Garden</a>
     </header>
 
@@ -18,7 +20,7 @@
         <!-- Sidebar for filters -->
         <aside>
             <h2>Filter by:</h2>
-        
+
             <h3>Growth Environment</h3>
             <ul id="environment-filters">
                 <li><input type="checkbox" onchange="toggleFilter('zones', 'wetland')"> Wetland</li>
@@ -28,20 +30,33 @@
                 <li><input type="checkbox" onchange="toggleFilter('zones', 'sheltered-gullies')"> Sheltered Gullies</li>
                 <li><input type="checkbox" onchange="toggleFilter('zones', 'alpine')"> Alpine </li>
             </ul>
-        
+
             <h3>Frost Tolerance</h3>
             <ul id="frost-filters">
                 <li><input type="checkbox" onchange="toggleFilter('frostTolerance', 'frost-hardy')"> Frost-Hardy</li>
-                <li><input type="checkbox" onchange="toggleFilter('frostTolerance', 'frost-tolerant')"> Frost-Tolerant</li>
+                <li><input type="checkbox" onchange="toggleFilter('frostTolerance', 'frost-tolerant')"> Frost-Tolerant
+                </li>
                 <li><input type="checkbox" onchange="toggleFilter('frostTolerance', 'frost-tender')"> Frost-Tender</li>
             </ul>
-        
+
             <h3>Plant Uses</h3>
             <ul id="uses-filters">
                 <li><input type="checkbox" onchange="toggleFilter('uses', 'medicinal')"> Medicinal</li>
                 <li><input type="checkbox" onchange="toggleFilter('uses', 'ornamental')"> Ornamental</li>
                 <li><input type="checkbox" onchange="toggleFilter('uses', 'bird-attractor')"> Bird Attractor</li>
             </ul>
+
+            <h3>Height at 5 Years</h3>
+            <label for="height-range">Filter by height (m):</label><br />
+            <input type="range" id="height-range" min="0" max="10" step="0.1" value="5"
+                oninput="updateHeightLabel(this.value)">
+            <span id="height-value">5m</span>
+            <div>
+                <input type="checkbox" id="above-height" name="height-direction" value="above">
+                <label for="above-height">Above</label>
+                <input type="checkbox" id="below-height" name="height-direction" value="below">
+                <label for="below-height">Below</label>
+            </div>
         </aside>
 
         <!-- Main section for plant cards -->
@@ -50,10 +65,28 @@
                 <!-- Plant cards will dynamically update here -->
             </section>
         </main>
+        <div id="toast" class="toast"></div>
     </div>
     <script src="filter.js"></script>
     <script src="script.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>🌿 Created by Hannah Auckram</strong> — a native plant nerd, stargazer, and storyteller based in
+                Tāhuna, Aotearoa.</p>
+            <p>This plant planner is a labour of aroha, designed to help communities grow closer to the whenua through
+                native ecology.</p>
+            <p><strong>🌱 Data sourced from:</strong> the wonderful <a
+                    href="https://www.whakatipureforestationtrust.org.nz/" target="_blank" rel="noopener">Whakatipu
+                    Reforestation Trust</a>.</p>
+            <p>
+                <strong>✨ More from me:</strong>
+                <a href="https://instagram.com/hanaphotographic" target="_blank" rel="noopener">Photography</a> |
+                <a href="https://theologiamystica.com" target="_blank" rel="noopener">Podcast</a> |
+                <a href="mailto:hannah@example.com">Get in touch</a>
+            </p>
 </body>
+
 </html>
