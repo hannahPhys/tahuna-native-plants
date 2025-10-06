@@ -9,7 +9,7 @@
     "status": "threatened",
     "uses": ["medicinal", "bird-attractor"],
     "img": "kotukutuku.png",
-    "info": "Kōtukutuku is the world’s largest fuchsia. Its nectar-rich flowers attract tūī, bellbirds, and silvereyes, while the purple berries (kōnini) are edible for birds and people. Plant in moist, sheltered areas with good drainage and partial shade. Avoid dry, exposed sites."
+    "info": "Kōtukutuku is the world’s largest fuchsia. Its nectar-rich flowers attract tūī, bellbirds, and silvereyes, while the purple berries (kōnini) are edible for birds and people. Plant in moist, sheltered areas with good drainage and partial shade, protected when young. Avoid dry, exposed sites."
     },
   {
     "maoriName": "Tarata",
@@ -47,6 +47,29 @@
     "info": "Tawhai raunui forms dense, dark forest canopies on dry ridges and mountain slopes. It prefers free-draining, slightly acidic soils and full sun. Beech litter enriches the soil with fungi that benefit other native trees."
   },
   {
+    "maoriName": "Tawhai rauriki",
+    "commonName": "Mountain beech",
+    "botanicalName": "Nothofagus solandri var. cliffortioides",
+    "height": "5m",
+    "zones": ["alpine", "montane forest"],
+    "frostTolerance": ["frost-hardy"],
+    "status": "not-threatened",
+    "img": "tawhairauriki.jpg",
+    "info": "Fast growing. The hardiest of the beeches and will grow in most areas, but not in frost hollows. Can grow 1m per year."
+  },
+  {
+    "botanicalName": "Elaeocarpus hookerianus",
+    "maoriName": "Pōkākā",
+    "commonName": "Pōkākā",
+    "height": "1m",
+    "zones": ["montane forest"],
+    "frostTolerance": ["frost-tolerant"],
+    "status": "not-threatened",
+    "uses": ["ornamental", "bird-attractor"],
+    "img": "pokaka.jpg",
+    "info": "Slow growing forest tree with distinct juvenile leaves. Only plant under cover of taller plants. It produces blue fruit that birds love."
+  }
+  {
     "maoriName": "Houhere",
     "commonName": "Lacebark",
     "botanicalName": "Hoheria populnea",
@@ -56,13 +79,36 @@
     "status": "not-threatened",
     "uses": ["ornamental", "medicinal"],
     "img": "houhere.jpeg",
-    "info": "Houhere is a graceful small tree with white, starry flowers that bloom in summer. Prefers moist, fertile soils in sheltered positions. Its flowers attract insects, and it provides shade for understorey plants."
+    "info": "Houhere is a graceful small tree with white, starry flowers that bloom in summer. Prefers moist, fertile soils in sheltered positions. Its flowers attract insects, and it provides shade for understorey plants. Its bark can be used to make teas."
+  },
+  {
+    "commonName": "Long-leaved lacebark",
+    "botanicalName": "Hoheria sexstylosa",
+    "height": "3m",
+    "zones": ["hill-slopes", "rocky"],
+    "frostTolerance": ["frost-tolerant"],
+    "status": "not-threatened",
+    "uses": ["ornamental"],
+    "img": "long-leaved-lacebark.jpg",
+    "info": "Long-leaved lacebark is a smaller, hardier relative of houhere. It has narrow leaves and produces clusters of white flowers in summer. It thrives in well-drained soils and full sun to partial shade. Ideal for rock gardens and mixed native borders."
+  },
+  {
+    "maoriName": "Kapuka",
+    "commonName": "Broadleaf",
+    "botanicalName": "Griselinia littoralis",   
+    "height": "0.5m",
+    "zones": ["hill-slopes", "coastal"],
+    "frostTolerance": ["frost-tolerant"],
+    "status": "not-threatened",
+    "uses": ["ornamental", "bird-attractor"],
+    "img": "kapuka.jpg",
+    "info": "Kapuka is a fast-growing, hardy tree with glossy leaves and small yellow flowers. It thrives in well-drained soils and full sun to partial shade. Its berries attract birds, and it provides shelter for smaller plants. Ideal for hedges and windbreaks." 
   },
   {
     "maoriName": "Kahikatea",
     "commonName": "White pine",
     "botanicalName": "Dacrycarpus dacrydioides",
-    "height": "20m",
+    "height": "2m",
     "zones": ["wetland"],
     "frostTolerance": ["frost-hardy"],
     "status": "not-threatened",
@@ -114,7 +160,7 @@
     "status": "not-threatened",
     "uses": ["ornamental", "medicinal", "bird-attractor"],
     "img": "South Island Kōwhai.jpg",
-    "info": "Kōwhai produces bright yellow spring flowers rich in nectar for tūī and bellbirds. It prefers sunny, well-drained slopes. Avoid waterlogged soils. Seeds are toxic if ingested and to pollinating honey bees."
+    "info": "Kōwhai produces bright yellow spring flowers rich in nectar for tūī and bellbirds. It prefers sunny, well-drained slopes. Avoid waterlogged soils. Seeds are toxic if ingested. The nectar is also toxic to bees."
   },
   {
     "maoriName": "Tawhai",
@@ -126,7 +172,7 @@
     "status": "not-threatened",
     "uses": ["ornamental"],
     "img": "tawhai.jpeg",
-    "info": "Tawhai forms dense forest canopies at higher elevations. It prefers cool, moist, well-drained soils and partial shade. Tāhuna originally would have had silver beech dominated the upper, wetter valleys."
+    "info": "Tawhai forms dense forest canopies at higher elevations. It prefers cool, moist, well-drained soils and partial shade. Tāhuna originally would have had silver beech dominating the upper, wetter valleys."
   },
   {
     "commonName": "Mountain Wineberry",
@@ -137,7 +183,31 @@
     "status": "not-threatened",
     "uses": ["ornamental", "bird-attractor"],
     "img": "Mountain Wineberry.jpg",
-    "info": "Mountain wineberry is a hardy shrub with red stems and small edible berries that attract birds. It thrives in moist, cool conditions and tolerates frost. In Māori, wineberry is known as makomako although this is more commonly used for the larger Aristotelia serrata."
+    "info": "Mountain wineberry is a hardy shrub with red stems and small edible berries that attract birds. It thrives in moist, cool conditions and tolerates frost. Smaller than the Aristotelia serrata (wineberry), it is ideal for alpine and montane forests."
+  },
+  {
+    "botanicalName": "Aristotelia serrata",
+    "commonName": "Wineberry",
+    "maoriName": "Makomako",
+    "height": "4m",
+    "zones": ["hill-slopes", "montane forest"], 
+    "frostTolerance": ["frost-tender"],
+    "status": "not-threatened",
+    "uses": ["ornamental", "bird-attractor"],
+    "img": "wineberry.jpg",
+    "info": "Fast growing small tree but does not like hard frosts. Good in sheltered gullies, hill slopes or near lakes"
+  },
+  {
+    "botanicalName": "Prumnopitys taxifolia",
+    "maoriName": "Matai",
+    "commonName": "Black pine",
+    "height": "1m",
+    "zones": ["montane forest"],
+    "frostTolerance": ["frost-tolerant"],
+    "status": "not-threatened",
+    "uses": ["ornamental", "bird-attractor"],
+    "img": "Matai.jpg",
+    "info": "Matai is a slow-growing conifer with dark green foliage and red berries that attract birds. A slow growing, long lived podocarp. Hardy but prefers to grow under the shelter of other plants. Juvenile foliage wiry. "
   },
   {
     "maoriName": "Putaputaweta",
@@ -169,7 +239,7 @@
     "height": "1.5m",
     "zones": ["dry-rocky-slopes", "montane forest"],
     "frostTolerance": ["frost-tender"],
-    "status": "not-threatened",
+    "status": "threatened",
     "uses": ["bird-attractor"],
     "img": "fierce-lancewood.png",
     "info": "The Fierce Lancewood has distinctive spiny juvenile leaves that deter browsing animals. It prefers free-draining soils and sun or light shade. There are three species of lancewood, all called Horoeka by Māori. The rarest is fierce lancewood."
@@ -211,8 +281,7 @@
     "info": "Inaka is a compact flax native to alpine slopes. It forms dense fans of green-red leaves and tall flower spikes rich in nectar. It thrives in full sun and well-drained soils, often alongside mountain tōtara and kānuka. Ideal for rock gardens and high-country restoration."
   },
   {
-    "maoriName": "Karamū",
-    "commonName": "New Zealand laurel",
+    "commonName": "Karamū",
     "botanicalName": "Coprosma robusta",
     "height": "2m",
     "zones": ["wetland", "montane forest"],
@@ -448,5 +517,41 @@
     "uses": ["ornamental", "bird-attractor"],
     "img": "snow-totara.jpg",
     "info": "Snow Tōtara thrives on rocky slopes, alpine and montane sites with good drainage, and can tolerate frost and snow. Its berries attract native birds, and it is ideal for low forest cover. Plant alongside inaka, mountain tōtara, harakeke, and kānuka to mimic natural alpine vegetation."
+}
+,{
+    "commonName": "Mingimingi",   
+    "botanicalName": "Coprosma propinqua",
+    "height": "2m",
+    "zones": ["wetland", "montane forest"],
+    "frostTolerance": ["frost-tolerant"],
+    "status": "not-threatened",
+    "uses": ["ornamental", "bird-attractor"],
+    "img": "mingimingi.jpg",
+    "info": "Mingimingi is a dense, bushy shrub with small leaves and berries that attract birds. It thrives in moist soils and full sun to light shade. Dense wide-angled branches superb to use as hedge hidout for insects and lizards"
+},
+{
+    "maoriName": "Mikimiki",
+    "commonName": "Yellow Wood",
+    "botanicalName": "Coprosma linariifolia",
+    "height": "3m",
+    "zones": ["montane forest"],
+    "frostTolerance": ["frost-tolerant"],
+    "status": "not-threatened",
+    "uses": ["ornamental", "bird-attractor"],
+    "img": "mikimiki.jpg",
+    "info": "Mikimiki is the tallest coprosma with narrow, brownish leaves. Prefers shelter and is happy growing under other trees."
+},
+{
+    "maoriName": "Manatu",
+    "commonName": "Lowland Ribbonwood",
+    "botanicalName": "Plagianthus regius",  
+    "height": "4m",
+    "zones": ["montane forest", "hill-slopes"],
+    "frostTolerance": ["frost-tolerant"],
+    "status": "not-threatened",
+    "uses": ["ornamental", "bird-attractor"],
+    "img": "manatu.jpg",
+    "info": "Fast growing, deciduous tree that eventually forms a roundheaded tree. Very hardy but slow if too dry."
+
 }
 ]

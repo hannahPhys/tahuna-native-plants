@@ -23,6 +23,12 @@ function fetchAndDisplayPlants() {
         .then(response => response.json())
         .then(data => {
             allPlants = data;  // Store the fetched plant data globally
+
+        // Sort plants by height in ascending order
+        allPlants.sort((a, b) => {
+            const parseHeight = h => parseFloat(h) || 0; // remove 'm' and convert to number
+            return parseHeight(b.height) - parseHeight(a.height);
+        });
             applyFilters();    // Apply filters to the loaded data (if any are active)
         })
         .catch(error => console.error('Error fetching plants data:', error));
@@ -52,6 +58,7 @@ function displayPlants(filteredPlants) {
             <p><strong>5 Year Height:</strong> ${plant.height}</p>
             <p><strong>Growth Zones:</strong> ${plant.zones.map(zone => capitalize(zone)).join(', ').replace('—', '')}</p>
             <p><strong>Frost Tolerance:</strong> ${plant.frostTolerance.map(frost => capitalize(frost)).join(', ')}</p>
+            <br />
             <p>${capitalize(plant?.info)}</p>
             `;
 
