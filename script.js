@@ -40,21 +40,21 @@ function displayPlants(filteredPlants) {
         // Create HTML structure for plant data
         plantCard.innerHTML = `
             <div class="image-wrapper"> 
-                <img src="plants/${plant.img}" alt="${plant.name}" class="zoom-image" width="300" height="200">
+                <img src="plants/${plant.img}" alt="${plant.commonName}" class="zoom-image" width="300" height="200">
             </div>
             <img src="icons/plus.svg" class="add-to-garden" data-plant='${JSON.stringify(plant)}'></img> 
 
-            <h2>${plant.name}</h2>
+            ${plant.maoriName 
+                ? `<h2>${plant.maoriName} (${plant.commonName})</h2>` 
+                : `<h2>${plant.commonName}</h2>`}
 
+            <p><strong>Botanical Name:</strong> <em>${plant.botanicalName}</em></p>
             <p><strong>5 Year Height:</strong> ${plant.height}</p>
-            <p><strong>Growth Zones:</strong> ${plant.zones.map(zone => capitalize(zone)).join(', ')}</p>
+            <p><strong>Growth Zones:</strong> ${plant.zones.map(zone => capitalize(zone)).join(', ').replace('—', '')}</p>
             <p><strong>Frost Tolerance:</strong> ${plant.frostTolerance.map(frost => capitalize(frost)).join(', ')}</p>
-        `;
+            <p>${capitalize(plant?.info)}</p>
+            `;
 
-        plantCard.addEventListener('click', (event) => {
-            if (event.target.classList.contains('add-to-garden')) return; 
-            showPlantDetails(plant);
-        });
         addPlantClasses(plant, plantCard);  // Add plant-specific classes
         addPlantIcons(plantCard);           // Add icons based on plant properties
 
@@ -130,12 +130,12 @@ function addPlantIcons(plantCard) {
 function addPlantToGarden(plant) {
     let gardenPlants = JSON.parse(localStorage.getItem('gardenPlants')) || [];
 
-    if (!gardenPlants.some(p => p.name === plant.name)) {
+    if (!gardenPlants.some(p => p.commonName === plant.commonName)) {
         gardenPlants.push(plant);
         localStorage.setItem('gardenPlants', JSON.stringify(gardenPlants));
-        showToast(`${plant.name} added to your garden!`);
+        showToast(`${plant.commonName} added to your garden!`);
     } else {
-        showToast(`${plant.name} is already in your garden.`, "#f44336"); // red for error
+        showToast(`${plant.commonName} is already in your garden.`, "#f44336"); // red for error
     }
 }
 
@@ -152,59 +152,6 @@ function initializeMasonry() {
     imagesLoaded(grid).on('progress', () => {
         msnry.layout();
     });
-}
-
-/* When clicked on animate full plant information */
-
-function showPlantDetails(plant) {
-    const detailOverlay = document.getElementById('plant-detail-overlay');
-    const detailContent = document.getElementById('plant-detail-content');
-
-    detailOverlay.style.display = 'flex';
-    detailContent.style.opacity = '0';
-    detailContent.style.transform = 'scale(0.8)';
-    void detailContent.offsetWidth; // Trigger reflow
-
-    detailContent.innerHTML = `
-        <button class="close-button" onclick="closePlantDetails()"></button>
-        <h2>${plant.name}</h2>
-        <img src="plants/${plant.img}" alt="${plant.name}" class="zoom-image" width="400" height="250">
-        <p><strong>5 Year Height:</strong> ${plant.height}</p>
-        <p><strong>Growth Zones:</strong> ${plant.zones.map(capitalize).join(', ')}</p>
-        <p><strong>Frost Tolerance:</strong> ${plant.frostTolerance.map(capitalize).join(', ')}</p>
-        <p><strong>Uses:</strong> ${plant.uses.map(capitalize).join(', ')}</p>
-        <p><strong>Status:</strong> ${capitalize(plant.status)}</p>
-        <p><strong>Information:</strong> ${capitalize(plant?.info)}</p>
-
-    `;
-
-    setTimeout(() => {
-        detailContent.style.opacity = '1';
-        detailContent.style.transform = 'scale(1)';
-    }, 10);
-
-    detailOverlay.classList.add('show');
-    document.body.style.overflow = 'hidden';
-}
-
-function closePlantDetails() {
-    const detailOverlay = document.getElementById('plant-detail-overlay');
-    const detailContent = document.getElementById('plant-detail-content');
-
-    detailOverlay.removeEventListener('transitionend', clearDetailContent);
-
-    detailContent.style.opacity = '0';
-    detailContent.style.transform = 'scale(0.8)';
-
-    detailOverlay.addEventListener('transitionend', clearDetailContent);
-
-    function clearDetailContent() {
-        detailOverlay.classList.remove('show');
-        detailOverlay.style.display = 'none';
-        detailContent.innerHTML = '';
-        detailOverlay.removeEventListener('transitionend', clearDetailContent);
-        document.body.style.overflow = '';
-    }
 }
 
 // Main function to initialize everything on page load

@@ -12,10 +12,12 @@ function loadGardenPlants() {
             plantCard.classList.add('plant-card');
             plantCard.innerHTML = `
                 <div class="image-wrapper">
-                    <img src="plants/${plant.img}" alt="${plant.name}" class="zoom-image">
+                    <img src="plants/${plant.img}" alt="${plant.commonName}" class="zoom-image">
                 </div>
                 <img src="icons/minus.png" class="remove-from-garden" data-plant='${JSON.stringify(plant)}'></img> 
-                <h2>${plant.name}</h2>
+                ${plant.maoriName 
+                ? `<h2>${plant.maoriName} (${plant.commonName})</h2>` 
+                : `<h2>${plant.commonName}</h2>`}
 
                 <p><strong>5 Year Height:</strong> ${plant.height}</p>
                 <p><strong>Growth Zones:</strong> ${plant.zones.join(', ')}</p>
@@ -29,7 +31,7 @@ function loadGardenPlants() {
         document.querySelectorAll('.remove-from-garden').forEach(button => {
             button.addEventListener('click', function () {
                 const plantData = JSON.parse(this.getAttribute('data-plant'));
-                removePlantFromGarden(plantData.name);
+                removePlantFromGarden(plantData.commonName);
             });
         });
 
@@ -80,7 +82,7 @@ function showToast(message, bgColor = "#4caf50") {
 // Function to remove a plant from the garden
 function removePlantFromGarden(plantName) {
     let gardenPlants = JSON.parse(localStorage.getItem('gardenPlants')) || [];
-    gardenPlants = gardenPlants.filter(plant => plant.name !== plantName);
+    gardenPlants = gardenPlants.filter(plant => plant.commonName !== plantName);
     localStorage.setItem('gardenPlants', JSON.stringify(gardenPlants));
     showToast(`${plantName} removed from garden!`);
     loadGardenPlants();  // Refresh the displayed list
